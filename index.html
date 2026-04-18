@@ -640,90 +640,26 @@
         <p style="font-size:14px;color:var(--muted);line-height:1.7;font-weight:300" class="ko">신청서를 작성하시면 24시간 내 확인 이메일을 드립니다.<br>그 후 스크린샷 또는 화면녹화를 보내주시면 진단이 시작됩니다.</p>
         <p style="font-size:14px;color:var(--muted);line-height:1.7;font-weight:300" class="en">Fill this form and I'll reply within 24 hours.<br>Then email your screenshots or recording — and the diagnosis begins.</p>
       </div>
-      <div class="form-card">
-        <form id="diagForm" onsubmit="submitForm(event)">
 
-          <div class="form-group">
-            <label class="form-label"><span class="ko">이름</span><span class="en">Name</span> *</label>
-            <input type="text" class="form-input" placeholder="Hong Gildong / John Smith" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">이메일</span><span class="en">Email</span> *</label>
-            <input type="email" class="form-input" placeholder="you@company.com" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">사용 중인 툴</span><span class="en">Tool(s) you use</span> *</label>
-            <select class="form-select" required>
-              <option value="" disabled selected><span class="ko">선택해주세요</span><span class="en">Select</span></option>
-              <option>n8n</option>
-              <option>Make (Integromat)</option>
-              <option>Zapier</option>
-              <option>n8n + Make</option>
-              <option>n8n + Zapier</option>
-              <option>Make + Zapier</option>
-              <option>All three</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">운영 중인 워크플로우 수</span><span class="en">Number of active workflows</span> *</label>
-            <select class="form-select" required>
-              <option value="" disabled selected><span class="ko">선택해주세요</span><span class="en">Select</span></option>
-              <option>3–5</option>
-              <option>6–10</option>
-              <option>11–20</option>
-              <option>20+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">겪고 있는 문제 설명</span><span class="en">Describe the issue</span> *</label>
-            <textarea class="form-textarea" placeholder="e.g. My n8n CRM sync and lead scoring workflows seem to overwrite each other's data. Duplicate records appear randomly and I can't figure out where the trigger fires twice." required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">제출 가능한 자료</span><span class="en">Materials you can provide</span></label>
-            <select class="form-select">
-              <option><span class="ko">스크린샷 (이미지 파일)</span><span class="en">Screenshots (image files)</span></option>
-              <option>Screenshots (image files)</option>
-              <option>Screen recording (MP4, MOV, etc.)</option>
-              <option>Both screenshots + screen recording</option>
-              <option>Not ready yet — I'll prepare after confirmation</option>
-            </select>
-            <div class="form-hint ko">신청 완료 후 확인 이메일로 자료를 첨부해 보내주시면 됩니다. 민감한 정보는 모자이크 처리 후 보내셔도 됩니다.</div>
-            <div class="form-hint en">After submitting, reply to my confirmation email with your materials attached. Feel free to blur sensitive info before sending.</div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label"><span class="ko">원하시는 서비스</span><span class="en">Service you're interested in</span></label>
-            <select class="form-select">
-              <option>Free diagnosis (first-time)</option>
-              <option>Full report — ₩150,000 / $110</option>
-              <option>Fix Together — ₩350,000 / $260</option>
-              <option>Not sure yet — let's talk first</option>
-            </select>
-          </div>
-
-          <button type="submit" class="form-submit">
-            <span class="ko">진단 신청하기 →</span>
-            <span class="en">Submit Diagnosis Request →</span>
-          </button>
-          <p class="form-fine">
-            <span class="ko">신청 후 24시간 이내 <strong>jdm031021@koreatech.ac.kr</strong> 에서 확인 이메일을 드립니다.<br>해당 이메일로 스크린샷·화면녹화를 보내주시면 진단이 시작됩니다.<br>결제는 리포트 전달 후 진행됩니다.</span>
-            <span class="en">I'll reply from <strong>jdm031021@koreatech.ac.kr</strong> within 24 hours.<br>Reply to that email with your screenshots or recording to start the diagnosis.<br>Payment is collected after you receive the report.</span>
-          </p>
-        </form>
-        <div class="form-success" id="formSuccess">
-          <div class="check">✅</div>
-          <h3 class="ko">신청 완료!</h3>
-          <h3 class="en">Application Received!</h3>
-          <p class="ko">24시간 이내에 <strong>jdm031021@koreatech.ac.kr</strong> 에서<br>확인 이메일을 보내드립니다.<br><br>해당 이메일로 스크린샷 또는 화면녹화를<br>첨부해 회신해 주시면 진단이 시작됩니다.</p>
-          <p class="en">I'll email you from <strong>jdm031021@koreatech.ac.kr</strong><br>within 24 hours.<br><br>Reply to that email with your screenshots<br>or screen recording to begin the diagnosis.</p>
-        </div>
+      <!-- Tally embed -->
+      <div style="background:var(--surface);border:1px solid rgba(232,255,71,.15);border-radius:var(--rl);overflow:hidden;">
+        <iframe
+          data-tally-src="https://tally.so/embed/xXNPZG?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="AgentFlow 신청"
+          style="display:block;padding:8px 4px;"
+        ></iframe>
       </div>
+
+      <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:14px;line-height:1.7">
+        <span class="ko">신청 후 24시간 이내 <strong style="color:var(--muted)">jdm031021@koreatech.ac.kr</strong> 에서 확인 이메일을 드립니다.<br>결제는 리포트 전달 후 진행됩니다.</span>
+        <span class="en">I'll reply from <strong style="color:var(--muted)">jdm031021@koreatech.ac.kr</strong> within 24 hours.<br>Payment is collected only after you receive the report.</span>
+      </p>
     </div>
   </div>
 </section>
@@ -774,12 +710,9 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-  // ── FORM SUBMIT ──
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('diagForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }
+  // ── FORM SUBMIT — removed, using Tally ──
 </script>
+
+<script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
